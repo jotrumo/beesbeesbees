@@ -9,11 +9,13 @@ var RetiredForagerBee = function() {
 
 RetiredForagerBee.prototype = Object.create(Grub.prototype);
 
+RetiredForagerBee.prototype.constructor = RetiredForagerBee;
+
 RetiredForagerBee.prototype.forage = function() {
   return 'I am too old, let me play cards instead';
-}
+};
 
 RetiredForagerBee.prototype.gamble = function(input) {
-  return RetiredForagerBee.treasureChest.push(input);
+  return this.treasureChest.push(input);
 };
 
